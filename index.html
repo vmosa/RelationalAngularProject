@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- Base HTML file-->
+<html ng-app="RelationalAngularApp">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.angularjs.org/1.7.7/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+	<script src="relationalAngularApp.js"></script>
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<title>Relational angularjs application</title>
+	
+</head>
+<body ng-controller="MainAppController">
+<ul>
+<li ng-repeat="td in toDo">{{td}}</li>
+</ul>
+</body>
+</html>
