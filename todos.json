@@ -1,0 +1,19 @@
+{
+"task1":{
+"Description": "Create basic html"
+"Time to complete": 10
+"unit time":"minutes"
+},
+"task 2": {
+"Description": "Create app.js as the basic app file"
+"Time to complete": 1
+"unit time":"hours"
+},
+"task 3": {
+"Description": "Create .js file to demonstrate service"
+"Time to complete": 2
+"unit time":"hours"
+}
+
+
+}
