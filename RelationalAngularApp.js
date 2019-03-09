@@ -10,8 +10,5 @@ function($http, $scope){
 	},(response)=>{
 		console.error(response);
 	}
-	);
-	
-	
-	
+	);	
 }]);
