@@ -1,5 +1,8 @@
 # RelationalAngularProject
 An evolving project using AngularJS
-* Create a simple index page
-* Create basic app module
-* Create app module controller
+- [x] Create a simple index page
+- [x] Create basic app module
+- [x] Create app module controller
+- [ ] Make simple http get call
+- [ ] Create service using $http
+- [ ] Inject service in base controller
