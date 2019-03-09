@@ -12,7 +12,8 @@
 </head>
 <body ng-controller="MainAppController">
 <ul>
-<li ng-repeat="td in toDo">{{td}}</li>
+<li ng-repeat="td in toDo">{{td.description}}<br/>
+	<p>Time taken to complete: {{td.timeToComplete+" "+td.timeUnit}} </p></li>
 </ul>
 </body>
 </html>
