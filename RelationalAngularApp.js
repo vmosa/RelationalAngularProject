@@ -1,4 +1,4 @@
-var app=angular.module('RelationalAngularApp',['MainAppServiceModule']);
+var app=angular.module('RelationalAngularApp',['MainAppServiceModule', 'ProductInputForm']);
 
 app.controller('MainAppController',[ 
 '$scope', 
@@ -13,5 +13,23 @@ function(
 		},(response)=>{
 			console.error(response);
 		}
+
 	);
+	/*$scope.toDo={
+		"task1":{
+		"description": "Create basic html",
+		"timeToComplete": 10,
+		"timeUnit":"minutes"
+		},
+		"task2": {
+		"description": "Create app.js as the basic app file",
+		"timeToComplete": 1,
+		"timeUnit":"hours"
+		},
+		"task3": {
+		"description": "Create .js file to demonstrate service",
+		"timeToComplete": 2,
+		"timeUnit":"hours"
+		}
+		};*/
 }]);

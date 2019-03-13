@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <!-- Base HTML file-->
 <html ng-app="RelationalAngularApp" ng-strict-di>
+
 <head>
 	<meta charset="UTF-8">
 	<script src="https://code.angularjs.org/1.7.7/angular.min.js"></script>
 	<script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
 	<script src="MainAppHttpService.js"></script>
 	<script src="RelationalAngularApp.js"></script>
+	<script src="ProductInputForm.component.js"></script>
 	
 	<!-- <link rel="stylesheet" href="styles.css"> -->
 	<title>Relational angularjs application</title>
 	
 </head>
-<body ng-controller="MainAppController">
-<ul>
+<body >
+<div >
+<ul ng-controller="MainAppController">
 <li ng-repeat="td in toDo">{{td.description}}<br/>
 	<p>Time taken to complete: {{td.timeToComplete+" "+td.timeUnit}} </p></li>
 </ul>
+</div>
+
+<product-input></product-input>
+
 </body>
 </html>
