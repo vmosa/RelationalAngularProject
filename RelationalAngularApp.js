@@ -1,6 +1,9 @@
-var app=angular.module('RelationalAngularApp',['MainAppServiceModule', 'ProductInputForm']);
-
-app.controller('MainAppController',[ 
+var app=angular.module('RelationalAngularApp',['ngRoute','MainAppServiceModule', 'ProductInputForm']);
+app.config(['$routeProvider',($routeProvider)=>{
+	$routeProvider.when('/productForm',{
+		template:'<product-input></product-input>'
+	});
+}]).controller('MainAppController',[ 
 '$scope', 
 'MainAppHttpService',
 function( 
