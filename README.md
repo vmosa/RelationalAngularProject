@@ -8,5 +8,6 @@ An evolving project using AngularJS
 - [x] Inject service in base controller
 - [x] Create a component (ProductInputForm) and its template
 - [x] Use component in index html
-- [ ] Create route using ngRoute
-- [ ] Use route to load the component ProductInputForm
+- [x] Create route using ngRoute
+- [x] Use route to load the component ProductInputForm
+- [x] Create SharedServices module to enable communication between components
