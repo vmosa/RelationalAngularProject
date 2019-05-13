@@ -1,4 +1,4 @@
-var app=angular.module('RelationalAngularApp',['ngRoute','MainAppServiceModule', 'ProductInputForm']);
+var app=angular.module('RelationalAngularApp',['ngRoute','MainAppServiceModule', 'ProductInputForm', 'sharedServiceModule']);
 app.config(['$routeProvider',($routeProvider)=>{
 	$routeProvider.when('/productForm',{
 		template:'<product-input></product-input>'
@@ -18,6 +18,9 @@ function(
 		}
 
 	);
+		
+	
+	
 	/*$scope.toDo={
 		"task1":{
 		"description": "Create basic html",
