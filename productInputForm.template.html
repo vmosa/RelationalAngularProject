@@ -2,9 +2,7 @@
     <form> 
 Product Code: <input type="text" ng-model="$ctrl.data.productCode" required/><br/>
 Product Name: <input type="text" ng-model="$ctrl.data.productName"/><br/>
-<<<<<<< HEAD
 Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity" min="1" max="99999"/><br/>
-=======
 Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
 <div ng-if="$ctrl.data.productName=='fish'"> 
     Method of storage <select type="text" ng-model="$ctrl.data.storageType">
@@ -13,7 +11,6 @@ Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
 </div>
 <input type="submit" ng-value="$ctrl.submitText" />
 <input type="reset" ng-value="$ctrl.cancelText" />
->>>>>>> productInputForm-changes
 </form>
 {{$ctrl.data.productCode}}
 </div>
