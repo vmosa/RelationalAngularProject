@@ -3,6 +3,13 @@
 Product Code: <input type="text" ng-model="$ctrl.data.productCode"/><br/>
 Product Name: <input type="text" ng-model="$ctrl.data.productName"/><br/>
 Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
+<div ng-if="$ctrl.data.productName=='fish'"> 
+    Method of storage <select type="text" ng-model="$ctrl.data.storageType">
+        <option  ng-repeat="x in $ctrl.storageTypes" ng-value="{{x}}">{{x}}</option>
+    </select>
+</div>
+<input type="submit" ng-value="$ctrl.submitText" />
+<input type="reset" ng-value="$ctrl.cancelText" />
 </form>
 {{$ctrl.data.productCode}}
 </div>

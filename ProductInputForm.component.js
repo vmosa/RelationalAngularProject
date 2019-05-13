@@ -8,6 +8,10 @@ templateUrl:"productInputForm.template.html",
 '</form>{{$ctrl.data.productCode}}</div>',*/
 controller: function ProductInputFormController(){
     this.data={};
+    this.storageTypes=['sack', 'crate', 'bottle'];
+    this.submitText="Create product entry";
+    this.cancelText="Start over";
+
     }
 
 
