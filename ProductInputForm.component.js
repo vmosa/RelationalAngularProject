@@ -14,6 +14,7 @@ template: '<div>'+
 '<ul><li ng-repeat="x in $ctrl.searchResultsList">Code: {{x.productCode}} Description: {{x.productDescription}}</li><ul>',
 controller: ['sharedProductList',function ProductInputFormController(sharedProductList){
     this.data={};
+<<<<<<< HEAD
 	this.dataList=[];
 	this.submit=(item)=>{
 		//this.dataList.push(this.data);
@@ -43,6 +44,13 @@ controller: ['sharedProductList',function ProductInputFormController(sharedProdu
 		}
 	};
     }]
+=======
+    this.storageTypes=['sack', 'crate', 'bottle'];
+    this.submitText="Create product entry";
+    this.cancelText="Start over";
+
+    }
+>>>>>>> productInputForm-changes
 
 
 });
