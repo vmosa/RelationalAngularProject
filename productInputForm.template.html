@@ -3,7 +3,7 @@
 Product Code: <input type="text" ng-model="$ctrl.data.productCode" required/><br/>
 Product Name: <input type="text" ng-model="$ctrl.data.productName"/><br/>
 Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity" min="1" max="99999"/><br/>
-Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
+
 <div ng-if="$ctrl.data.productName=='fish'"> 
     Method of storage <select type="text" ng-model="$ctrl.data.storageType">
         <option  ng-repeat="x in $ctrl.storageTypes" ng-value="{{x}}">{{x}}</option>
