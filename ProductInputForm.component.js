@@ -3,7 +3,7 @@ var form = angular.module('ProductInputForm',['ngRoute']);
 form.component('productInput', {
 //templateUrl:"productInputForm.template.html",
 template: `<div ng-class="$ctrl.containerClass" >
-    <form > 
+    <form ng-submit="$ctrl.submitProductForm()"> 
 Product Code: <input type="text" ng-model="$ctrl.data.productCode"/><br/>
 Product Name: <input type="text" ng-model="$ctrl.data.productName"  ng-change="$ctrl.checkValue()" /><br/>
 Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
@@ -17,20 +17,34 @@ Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
 </form>
 <span ng-if="ctrl.data.productCode!=null">{{$ctrl.data.productCode}}
 </div>`,
-controller: ['$route','$scope', function($route,$scope){
+controller: ['$route','$scope','$http', function($route,$scope, $http){
     this.data={};
+	var urlSubmit='notvalid'; // to be added
     this.storageTypes=['sack', 'crate', 'bottle'];
     this.submitText="Create product entry";
     this.cancelText="Start over";
 	this.containerClass+='text-secondary';
 	this.containerClass+='badge';
 	this.check=false;
-	
-	
+	this.submitProductForm=()=>{
+		if (urlSubmit.length>0){
+			$http.post(this.url, this.data).then(
+			(response)=>{
+				console.log(response);
+			},(err)=>{
+				alert('request could not be completed, check console for more information');
+				console.error(response);
+			});			
+		}
+		else{
+			alert('No url for post request, data saved locally');
+			console.log(this.data);
+		
+		}
+		$route.reload();
+	};
 	
 	this.resetForm=()=>{
-		//this.data=[];
-		//this.check=this.checkValue();
 		$route.reload();
 	};
 	this.checkValue=()=>{
