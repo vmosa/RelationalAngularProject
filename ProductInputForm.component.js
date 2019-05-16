@@ -3,16 +3,16 @@ var form = angular.module('ProductInputForm',['ngRoute']);
 form.component('productInput', {
 //templateUrl:"productInputForm.template.html",
 template: `<div ng-class="$ctrl.containerClass" >
-    <form ng-submit="$ctrl.submitProductForm()"> 
-Product Code: <input type="text" ng-model="$ctrl.data.productCode"/><br/>
+    <form name="productForm" ng-submit="$ctrl.submitProductForm()"> 
+Product Code: <input type="text" ng-model="$ctrl.data.productCode" required/><br/>
 Product Name: <input type="text" ng-model="$ctrl.data.productName"  ng-change="$ctrl.checkValue()" /><br/>
-Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity"/><br/>
+Quantity in stock: <input type="number" ng-model="$ctrl.data.quantity" required/><br/>
 <div ng-if="$ctrl.check"> 
     Method of storage <select type="text" ng-model="$ctrl.data.storageType">
         <option  ng-repeat="x in $ctrl.storageTypes" ng-value="{{x}}">{{x}}</option>
     </select>
 </div>
-<input type="submit" ng-value="$ctrl.submitText" />
+<input type="submit" ng-value="$ctrl.submitText" ng-disabled="!productForm.$valid"/>
 <input type="reset" ng-value="$ctrl.cancelText" ng-click="$ctrl.resetForm()"/>
 </form>
 <span ng-if="ctrl.data.productCode!=null">{{$ctrl.data.productCode}}
