@@ -48,7 +48,7 @@ controller: ['$route','$scope','$http', function($route,$scope, $http){
 		$route.reload();
 	};
 	this.checkValue=()=>{
-		return this.check=this.data.productName=='fish';
+		this.check=this.data.productName=='fish';
 	}
 	
 	}]});
