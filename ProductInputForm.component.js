@@ -27,11 +27,12 @@ controller: ['$route','$scope','$http', function($route,$scope, $http){
 	this.containerClass+='badge';
 	this.check=false;
 	this.submitProductForm=()=>{
+		
 		if (urlSubmit.length>0){
-			$http.post(this.url, this.data).then(
+			$http.post(urlSubmit, this.data).then(
 			(response)=>{
 				console.log(response);
-			},(err)=>{
+			},(response)=>{
 				alert('request could not be completed, check console for more information');
 				console.error(response);
 			});			
@@ -49,6 +50,6 @@ controller: ['$route','$scope','$http', function($route,$scope, $http){
 	};
 	this.checkValue=()=>{
 		this.check=this.data.productName=='fish';
-	}
+	};
 	
 	}]});
