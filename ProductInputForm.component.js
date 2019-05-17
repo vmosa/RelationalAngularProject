@@ -29,11 +29,11 @@ controller: ['$route','$scope','$http', function($route,$scope, $http){
 	this.submitProductForm=()=>{
 		
 		if (urlSubmit.length>0){
-			$http.post(urlSubmit, this.data).then(
+			$http({method: 'post',url:urlSubmit, data: this.data}).then(
 			(response)=>{
 				console.log(response);
 			},(response)=>{
-				alert('request could not be completed, check console for more information');
+				alert('request could not be completed, check console for more information\n Status:' + response.status+'\n');
 				console.error(response);
 			});			
 		}
@@ -49,7 +49,8 @@ controller: ['$route','$scope','$http', function($route,$scope, $http){
 		$route.reload();
 	};
 	this.checkValue=()=>{
-		this.check=this.data.productName=='fish';
+		this.check=this.data.productName.indexOf('fish')>-1;
 	};
+	
 	
 	}]});
